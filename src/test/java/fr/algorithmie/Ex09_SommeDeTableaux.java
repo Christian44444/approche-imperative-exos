@@ -21,6 +21,7 @@ public class Ex09_SommeDeTableaux {
 
 	int[] tab1 = { 1, 15, -3, 0, 8, 7, 4, -2, 28, 7, -1, 17, 2, 3, 0, 14, -4 };
 	int[] tab2 = { -1, 12, 17, 14, 5, -9, 0, 18, -6, 0, 4, -13, 5, 7, -2, 8, -1 };
+	int[] somme = new int[tab1.length];
 
 	/**
 	 * Ne pas modifier les informations portées par l'annotation
@@ -33,6 +34,17 @@ public class Ex09_SommeDeTableaux {
 		// dont chaque case d’index i contient la somme arithmétique des cases d’index i
 		// des tableaux 1 et 2.
 		// Exemple : somme[i]=tab1[i]+tab2[i]
+		if (somme.length != tab2.length) {
+			Resultat.log("Les tableaux ne sont pas de même taille");
+		}
+		else {
+			for (int i = 0 ; i <= somme.length -1; i++) {
+				somme[i] = tab1[i] + tab2[i];
+			}
+		}
+		for (int i = 0 ; i <= somme.length -1; i++) {
+			Resultat.log(somme[i]);
+		}
 	
 	}
 }
