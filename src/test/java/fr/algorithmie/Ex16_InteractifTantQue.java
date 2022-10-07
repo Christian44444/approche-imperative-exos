@@ -33,8 +33,18 @@ public class Ex16_InteractifTantQue {
 		// entre 1 et 10 inclus l'application continue à demander un nombre à l'utilisateur.
 		// Si ce nombre est compris entre 1 et 10, l'application LOGUE le résultat 
 		// et s'arrête.
-		
+		int nb = 0;
+		do {
+			
+			System.out.println("Choisissez un nombre entre 1 et 10 inclus :");
+			nb = scanner.nextInt();
+			
+				
+		} while (nb < 1 || nb > 10);
+			
+		Resultat.log(nb);
 		scanner.close();
+		
 	}
 
 }
